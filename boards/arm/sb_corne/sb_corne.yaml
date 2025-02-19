@@ -1,5 +1,5 @@
-identifier: sb_nice_view
-name: SB Nice View
+identifier: sb_corne
+name: SB Corne
 url: https://github.com/spencerballing/zmk-config
 type: mcu
 arch: arm

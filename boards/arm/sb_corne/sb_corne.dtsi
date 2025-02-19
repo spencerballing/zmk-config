@@ -10,11 +10,11 @@
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "sb_nice_view-layouts.dtsi"
+#include "sb_corne-layouts.dtsi"
 
 / {
-    model = "sb_nice_view";
-    compatible = "sbniceviewperipherals,sb_nice_view";
+    model = "sb_corne";
+    compatible = "sbcorneperipherals,sb_corne";
 
     chosen {
         zephyr,code-partition = &code_partition;

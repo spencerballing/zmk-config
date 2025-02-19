@@ -3,20 +3,20 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_SB_NICE_VIEW_LEFT
+if BOARD_SB_CORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "SB Nice View Corne"
+    default "SB Corne"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif # BOARD_SB_NICE_VIEW_LEFT
+endif # BOARD_SB_CORNE_LEFT
 
-if BOARD_SB_NICE_VIEW_LEFT || BOARD_SB_NICE_VIEW_RIGHT
+if BOARD_SB_CORNE_LEFT || BOARD_SB_CORNE_RIGHT
 
 config BOARD
-    default "sb_nice_view"
+    default "sb_corne"
 
 config BOARD_ENABLE_DCDC
     bool "Enable DCDC mode"
@@ -27,7 +27,7 @@ config BOARD_ENABLE_DCDC_HV
     bool "Enable High Voltage DCDC converter"
     default y
     select SOC_DCDC_NRF52X_HV
-    depends on (BOARD_SB_NICE_VIEW_LEFT || BOARD_SB_NICE_VIEW_RIGHT)
+    depends on (BOARD_SB_CORNE_LEFT || BOARD_SB_CORNE_RIGHT)
 
 config ZMK_SLEEP
     default y
@@ -58,4 +58,4 @@ config LED_PWM
 
 endif # ZMK_BACKLIGHT
 
-endif # BOARD_SB_NICE_VIEW_LEFT || BOARD_SB_NICE_VIEW_RIGHT
+endif # BOARD_SB_CORNE_LEFT || BOARD_SB_CORNE_RIGHT

@@ -5,7 +5,7 @@ manifest:
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
-    - name: sb_nice_view
+    - name: sb_corne
       url: https://github.com/spencerballing/zmk-config
       revision: master
     - name: zmk

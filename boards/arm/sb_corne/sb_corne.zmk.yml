@@ -1,7 +1,7 @@
 file_format: "1"
-id: sb_nice_view
-name: SB Nice View
-url: https://github.com/a741725193/zmk-new_corne
+id: sb_corne
+name: SB Corne
+url: https://github.com/spencerballing/zmk-config
 type: board
 arch: arm
 features:
@@ -13,5 +13,5 @@ outputs:
   - usb
   - ble
 siblings:
-  - sb_nice_view_left
-  - sb_nice_view_right
+  - sb_corne_left
+  - sb_corne_right
