@@ -1,0 +1,17 @@
+file_format: "1"
+id: sb_nice_view
+name: SB Nice View
+url: https://github.com/a741725193/zmk-new_corne
+type: board
+arch: arm
+features:
+  - keys
+  - display
+  - underglow
+  - encoder
+outputs:
+  - usb
+  - ble
+siblings:
+  - sb_nice_view_left
+  - sb_nice_view_right

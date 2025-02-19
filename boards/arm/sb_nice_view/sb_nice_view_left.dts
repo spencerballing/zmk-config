@@ -1,0 +1,12 @@
+/*
+*
+* Copyright (c) 2024 The ZMK Contributors
+* SPDX-License-Identifier: MIT
+*
+*/
+
+#include "sb_nice_view.dtsi"
+
+&left_encoder {
+    status = "okay";
+};
