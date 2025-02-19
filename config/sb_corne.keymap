@@ -78,10 +78,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans          &kp N1           &kp N2          &kp N3        &kp N4     &kp N5                                         &kp UP_ARROW               &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2  &mkp LCLK  &mkp RCLK                      &kp LEFT_ARROW  &kp ENTER       &kp RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans          &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans     &rgb_ug RGB_EFF  &kp C_MUTE                    &kp DOWN_ARROW             &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                                 &trans        &trans     &trans                                                                    &kp INS          &kp DEL          &trans
+&trans          &kp N1           &kp N2           &kp N3           &kp N4           &kp N5                                         &kp UP_ARROW               &kp N6           &kp N7        &kp N8  &kp N9  &kp N0    &kp BSPC
+&bt BT_CLR_ALL  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &mkp LCLK        &mkp RCLK                      &kp LEFT_ARROW  &kp ENTER       &kp RIGHT  &trans           &kp N4        &kp N5  &kp N6  &kp HOME  &kp PG_UP
+&rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SPI  &kp C_MUTE                    &kp DOWN_ARROW             &rgb_ug RGB_HUI  &kp NUMBER_1  &kp N2  &kp N3  &kp END   &kp PG_DN
+                                                  &trans           &trans           &trans                                                                    &kp ENTER        &trans        &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
