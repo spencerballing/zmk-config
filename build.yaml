@@ -19,10 +19,10 @@
 #
 ---
 include:
-  - board: corne_left
+  - board: sb_nice_view_left
     shield: nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: corne_studio_left
-  - board: corne_right
+    artifact-name: sb_nice_view_studio_left
+  - board: sb_nice_view_right
     shield: nice_view
