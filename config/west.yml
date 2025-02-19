@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-config
       url: https://github.com/spencerballing/zmk-config
-      revision: main
+      revision: master
   self:
     path: config
