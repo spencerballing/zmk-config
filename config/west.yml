@@ -9,5 +9,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-config
+      url: https://github.com/spencerballing/zmk-config
+      revision: main
   self:
     path: config
