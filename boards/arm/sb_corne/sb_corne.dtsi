@@ -96,6 +96,11 @@
         compatible = "zmk,behavior-mouse-move";
         #sensor-binding-cells = <2>;
     };
+
+    msc: msc {
+        compatible = "zmk,behavior-mouse-scroll";
+        #sensor-binding-cells = <2>;
+    };
 };
 
 &adc {
