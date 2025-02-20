@@ -99,7 +99,7 @@
 
     msc: msc {
         compatible = "zmk,behavior-mouse-scroll";
-        #sensor-binding-cells = <2>;
+        #binding-cells = <2>;
     };
 };
 
