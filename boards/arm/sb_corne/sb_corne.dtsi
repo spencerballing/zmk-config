@@ -91,16 +91,6 @@
             pwms = <&pwm0 0 PWM_MSEC(1) PWM_POLARITY_NORMAL>;
         };
     };
-
-    mouse_move: mouse_move {
-        compatible = "zmk,behavior-mouse-move";
-        #sensor-binding-cells = <2>;
-    };
-
-    msc: msc {
-        compatible = "zmk,behavior-mouse-scroll";
-        #binding-cells = <2>;
-    };
 };
 
 &adc {
