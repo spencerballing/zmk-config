@@ -34,28 +34,28 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+    };
 
-        rgb_encoder: rgb_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-        };
+    rgb_encoder: rgb_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+    };
 
-        scroll_encoder: scroll_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-            tap-ms = <30>;
-        };
+        tap-ms = <30>;
+    };
 
-        custom_scroll_encoder: custom_scroll_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+    custom_scroll_encoder: custom_scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-            tap-ms = <30>;
-        };
+        tap-ms = <30>;
     };
 
     keymap {
@@ -70,7 +70,7 @@
                          &kp LGUI  &mo 1  &lt 3 SPACE                                                                &lt 3 ENTER  &mo 2  &kp RALT
             >;
 
-            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
@@ -94,7 +94,7 @@
                                     &trans     &trans     &kp SPACE                                                                    &kp RET    &trans     &trans
             >;
 
-            sensor-bindings = <&msc SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&custom_scroll_encoder>;
         };
 
         layer_3 {
