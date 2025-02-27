@@ -35,6 +35,25 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        scroll_behavior: scroll_behavior {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCROLL_UP>, <&msc SCROLL_DOWN>;
+        };
+    };
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <40>;
+        status = "okay";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        triggers-per-rotation = <20>;
+        sensors = <&left_encoder>;
     };
 
     rgb_encoder: rgb_encoder {
@@ -55,7 +74,7 @@
                                   &kp LGUI  &mo 1  &lt 3 SPACE                                                                &lt 3 ENTER  &mo 2  &kp LCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&scroll_behavior>;
         };
 
         lower_layer {
