@@ -1,5 +1,6 @@
 #define ZMK_MOUSE_SCRL_VAL 140
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors/mouse_keys.dtsi>
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -7,7 +8,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-
 /*
    &mmv_input_listener {
        input-processors = <&zip_xy_scaler 2 1>;
@@ -33,14 +33,25 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
-		inc_dec_mwh: inc_dec_mwh {
-			compatible = "zmk,behavior-sensor-rotate";
+		inc_dec_msc: behavior_sensor_rotate_mouse_wheel {
+			compatible = "zmk,behavior-sensor-rotate-var";
 			label = "ENC_MOUSE_WHEEL";
-			#sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+			#sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
             tap-ms = <20>;
 		};
     };
+
+&msc {
+  acceleration-exponent = <1>;      // 0
+  time-to-max-speed-ms = <40>;      // 500
+  delay-ms = <0>;                   // 10
+};
+
+#define SCRL_UP_ENCODER MOVE_Y(ZMK_MOUSE_SCRL_VAL_ENCODER)
+#define SCRL_DOWN_ENCODER MOVE_Y(-ZMK_MOUSE_SCRL_VAL_ENCODER)
+#define SCRL_LEFT_ENCODER MOVE_X(-ZMK_MOUSE_SCRL_VAL_ENCODER)
+#define SCRL_RIGHT_ENCODER MOVE_X(ZMK_MOUSE_SCRL_VAL_ENCODER)
 
     keymap {
         compatible = "zmk,keymap";
@@ -54,7 +65,7 @@
                                           &kp LGUI  &mo 1  &lt 3 SPACE                                                                &lt 3 ENTER  &mo 2  &kp LCTRL
             >;
 
-            sensor-bindings = <&inc_dec_mwh>;
+            sensor-bindings = <&inc_dec_msc SCRL_LEFT_ENCODER SCRL_RIGHT_ENCODER &inc_dec_msc SCRL_UP_ENCODER SCRL_DOWN_ENCODER>;
         };
 
         lower_layer {
