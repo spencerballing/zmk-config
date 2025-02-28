@@ -1,3 +1,4 @@
+#define ZMK_MOUSE_SCRL_VAL 140
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
@@ -37,6 +38,7 @@
 			label = "ENC_MOUSE_WHEEL";
 			#sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms <20>
 		};
     };
 
