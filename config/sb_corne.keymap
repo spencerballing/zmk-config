@@ -33,7 +33,7 @@
         };
 
 		inc_dec_mwh: inc_dec_mwh {
-			compatible = "zmk,behavior-sensor-rotate-var";
+			compatible = "zmk,behavior-sensor-rotate";
 			label = "ENC_MOUSE_WHEEL";
 			#sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
