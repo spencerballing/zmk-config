@@ -3,7 +3,7 @@
         behavior_sensor_rotate_mouse_wheel: behavior_sensor_rotate_mouse_wheel {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCROLL_UP>, <&msc SCROLL_DOWN>;
+            bindings = <&mwh SCROLL_UP>, <&mwh SCROLL_DOWN>;
         };
     };
 };

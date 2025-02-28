@@ -34,13 +34,13 @@
         };
     };
 
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <40>;
-        status = "okay";
-    };
+    // left_encoder: encoder_left {
+    //     compatible = "alps,ec11";
+    //     a-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    //     b-gpios = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    //     steps = <40>;
+    //     status = "okay";
+    // };
 
     sensors {
         compatible = "zmk,keymap-sensors";
