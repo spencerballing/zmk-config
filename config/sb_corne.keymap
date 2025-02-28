@@ -47,7 +47,7 @@
                                           &kp LGUI  &mo 1  &lt 3 SPACE                                                                &lt 3 ENTER  &mo 2  &kp LCTRL
             >;
 
-            sensor-bindings = <&inc_dec_mwh SCROLL_DOWN SCROLL_UP &inc_dec_mwh SCROLL_RIGHT SCROLL_LEFT>;
+            sensor-bindings = <&inc_dec_mwh>;
         };
 
         lower_layer {
