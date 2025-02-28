@@ -1,7 +1,7 @@
 / {
     behaviors {
         behavior_sensor_rotate_mouse_wheel: behavior_sensor_rotate_mouse_wheel {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <0>;
             bindings = <&mwh SCROLL_UP>, <&mwh SCROLL_DOWN>;
         };
