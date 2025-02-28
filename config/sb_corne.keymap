@@ -27,23 +27,17 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
+
         scroll_behavior: scroll_behavior {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&behavior_sensor_rotate_mouse_wheel>;
         };
-    };
-
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        triggers-per-rotation = <20>;
-        sensors = <&left_encoder>;
-    };
-
-    rgb_encoder: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
     keymap {
