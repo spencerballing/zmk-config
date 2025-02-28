@@ -1,9 +1,9 @@
 / {
     behaviors {
-        behavior_sensor_rotate_mouse_wheel: behavior_sensor_rotate_mouse_wheel {
+        inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
             compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <0>;
-            bindings = <&mwh SCROLL_UP>, <&mwh SCROLL_DOWN>;
+            #sensor-binding-cells = <2>;
+            bindings = <&mwh>, <&mwh>;
         };
     };
 };

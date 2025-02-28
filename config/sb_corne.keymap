@@ -26,12 +26,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-
-        scroll_behavior: scroll_behavior {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <0>;
-            bindings = <&behavior_sensor_rotate_mouse_wheel>;
-        };
     };
 
     sensors {
@@ -58,7 +52,7 @@
                                           &kp LGUI  &mo 1  &lt 3 SPACE                                                                &lt 3 ENTER  &mo 2  &kp LCTRL
             >;
 
-            sensor-bindings = <&scroll_behavior>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_DOWN SCROLL_UP &inc_dec_mwh SCROLL_RIGHT SCROLL_LEFT>;
         };
 
         lower_layer {
